@@ -2,7 +2,7 @@ CXX 				:= gcc
 # references openssl library in a way that allows the compiled code to find the
 # library no matter where the program is executed
 OPENSSL_INC			:= $(shell pwd)/openssl/include
-OPENSSL_LIB_DIR 	:= $(shell pwd)/openssl/lib
+OPENSSL_LIB_DIR 		:= $(shell pwd)/openssl/lib
 OPENSSL_LIB			:= crypto
 CXXFLAGS			:= -I$(OPENSSL_INC) -L$(OPENSSL_LIB_DIR) -l$(OPENSSL_LIB) -Wl,-rpath=$(OPENSSL_LIB_DIR)
 OBJ_DIR				:= obj/

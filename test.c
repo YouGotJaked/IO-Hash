@@ -26,7 +26,7 @@ int main(int argc, char **argv) {
         addElement(unique, buffer);
     }
     
-    printElements(unique);
+    //printElements(unique);
     printf("%d total words\n", words);
     printf("%d distinct words\n", numElements(unique));
     
