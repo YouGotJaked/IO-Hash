@@ -48,6 +48,7 @@ unsigned char *concatenate(char *str, unsigned char *catHash) {
 
 void invalid_hash(char *calc, unsigned char *read, int flag) {
     for (int i = 0; i < HASH_LEN; i++) {
+      printf("calc[%d] = %c\tread[%d] = %c\n", i, calc[i], i, read[i]);
         if (calc[i] != read[i]) {
             printf("%s\n", msg[flag]);
             exit(-1);

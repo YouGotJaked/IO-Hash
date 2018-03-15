@@ -105,7 +105,7 @@ bool addElement(SET *sp, char *elt) {
         return false;
     }
     
-    sp->elts[position] = elt;
+    sp->elts[position] = strdup(elt);
     sp->flags[position] = FILLED;
     sp->count++;
     return true;
