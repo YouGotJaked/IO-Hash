@@ -27,8 +27,8 @@ int main(int argc, char **argv) {
     }
     
     cleanup(h);
-    free(calc->strHash);
-    free(calc->catHash);
+    free(read);
+    free(calc);
     free(calc_cat);
     fclose(fr);
     printf("No omission from file detected.\n");

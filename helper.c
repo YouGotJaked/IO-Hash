@@ -57,7 +57,7 @@ void invalid_hash(char *calc, unsigned char *read, int flag) {
 
 // convert calculated string to hexadecimal
 char *char_to_hex(unsigned char *hash) {
-    char *converted = (char*) malloc(2*HASH_LEN);
+    char *converted = (char*) malloc(2*HASH_LEN + SIZE);
     for (int i = 0; i < 2*HASH_LEN; i++) {
         sprintf(&converted[2*i], "%02x", hash[i]);
     }

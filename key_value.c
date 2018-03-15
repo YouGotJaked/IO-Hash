@@ -34,14 +34,7 @@ SET *createSet(int maxElts) {
 }
 
 void destroySet(SET *sp) {
-    assert(sp != NULL);
-
-    for (int i = 0; i < sp->length; i++) {
-        if (sp->flags[i] == FILLED) {
-            free(sp->elts[i]);
-        }
-    }
-    
+    assert(sp != NULL); 
     free(sp->elts);
     free(sp->flags);
     free(sp);
@@ -53,7 +46,7 @@ int numElements(SET *sp) {
 }
 
 unsigned int hashString(char *s) {
-    unsigned hash = 0;
+    unsigned int hash = 0;
     
     while (*s != '\0') {
         hash = 31 * hash + *s++;
@@ -112,9 +105,6 @@ bool addElement(SET *sp, char *elt) {
         return false;
     }
     
-    elt = strdup(elt);
-    assert(elt != NULL);
-    
     sp->elts[position] = elt;
     sp->flags[position] = FILLED;
     sp->count++;
@@ -142,9 +132,9 @@ bool removeElement(SET *sp, char *elt) {
 
 void printElements(SET *sp) {
     for (int i = 0; i < sp->length; i++) {
-        if (sp->flags[i] == FILLED) {
+         if (sp->flags[i] == FILLED) {
             printf("%s ", sp->elts[i]);
-        }
+   	 }
     }
     printf("\n");
 }

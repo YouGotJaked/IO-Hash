@@ -13,8 +13,8 @@ int main(int argc, char **argv) {
     check_file(fr, argv);
 
     data *read = create_data(), *calc = create_data();
-    Hasher *h = createHasher();
-    
+    Hasher *h = createHasher(); 
+
     // scan file line by line
     while (fscanf(fr, "%d %s %s %s", &read->lenStr, read->str, read->strHash, read->catHash) != -1) {
         h->hash(read->str, &calc->strHash);
@@ -22,7 +22,8 @@ int main(int argc, char **argv) {
     }
 
     cleanup(h);
-    free(calc->strHash);
+    free(read);
+    free(calc);
     fclose(fr);
     printf("File has not been modified.\n");
     return 0;
