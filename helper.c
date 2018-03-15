@@ -16,7 +16,6 @@ data *create_data() {
     return d;
 }
 
-
 int check_argc(int argc, int n, char **argv) {
     if (argc != n) {
         char *msg;
