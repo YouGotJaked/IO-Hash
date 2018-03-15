@@ -3,8 +3,6 @@
 #include <string.h>
 #include "helper.c"
 
-// gcc -o output output.c -L/usr/local/lib/ -lssl -lcrypto
-
 int main(int argc, char **argv) {
     // check arguments
     check_argc(argc, 2, argv);
