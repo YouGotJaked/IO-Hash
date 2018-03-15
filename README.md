@@ -61,6 +61,10 @@ Execution:
 
 This file, along with `helper.h`, contains all of the functions to be used in the preceeding functions. It also contains the structure declaration `data` used to hold the strings, string length, and hash values.
 
+### key_value.c
+
+This file, along with `key_value.h`,  contains a `SET` data structure with each element containing a string and a hash value. This structure uses the hash values to prevent adding duplicate strings.
+
 ## Analysis
 
 1. How would you use such a program to detect duplicate strings (without modifying the programs themselves, but only using operations conducted on their output)?
