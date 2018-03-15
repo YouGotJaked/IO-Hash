@@ -28,19 +28,20 @@ int main(int argc, char **argv) {
         addElement(unique, buffer);
     }
 
-    printf("Enter a word to find:\n");
-    char input[255];
-    scanf("%s", input);
 
-    if (found = hasElement(unique, input)) {
-	printf("%s is found at %d\n", input, findElement(unique, input, &found));
-    } else {
-	printf("%s is not found.\n", input);
+    while (1) {
+        printf("Enter a word to find or type 'q' to quit:\n");
+        scanf("%s", buffer);
+        if (strcmp(buffer, "q") == 0) {
+            break;
+        } else if ((found = hasElement(unique, buffer))) {
+            printf("%s is found at %d\n", buffer, findElement(unique, buffer, &found));
+        } else {
+            printf("%s is not found.\n", buffer);
+        }
     }
     
-  
-   
-    
+    printf("Unique elements in set:\n");
     printElements(unique);
     printf("%d total words\n", words);
     printf("%d distinct words\n", numElements(unique));

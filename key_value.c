@@ -133,7 +133,7 @@ bool removeElement(SET *sp, char *elt) {
 void printElements(SET *sp) {
     for (int i = 0; i < sp->length; i++) {
          if (sp->flags[i] == FILLED) {
-            printf("%s ", sp->elts[i]);
+            printf("%s\t", sp->elts[i]);
    	 }
     }
     printf("\n");
