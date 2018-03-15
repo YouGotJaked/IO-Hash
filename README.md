@@ -1,6 +1,16 @@
 # I/0 Hash
 This program use hashes in order to solve an I/O or file systems' related problem.
 
+## Compilation
+
+A Makefile has been included to easily compile all C source files in this project. Type the following to compile them all:
+
+```
+make all
+```
+
+If any of the files fail to compile, they can also be compiled using the respective commands below.
+
 ## File Descriptions
 
 ### output.c
@@ -61,9 +71,41 @@ Execution:
 
 This file, along with `helper.h`, contains all of the functions to be used in the preceeding functions. It also contains the structure declaration `data` used to hold the strings, string length, and hash values.
 
+### CosmicRay.c
+
+This file simulates the occasional random bit flips caused by high-energy rays. It inserts a random ASCII character at some random location in the file. It is used to test `invalid.c` and `omission.c`.
+
+Compilation:
+
+```
+gcc -o CosmicRay CosmicRay.c
+```
+
+Execution:
+
+```
+./CosmicRay <input file>
+```
+
 ### key_value.c
 
 This file, along with `key_value.h`,  contains a `SET` data structure with each element containing a string and a hash value. This structure uses the hash values to prevent adding duplicate strings.
+
+### test.c
+
+This file is used to test the `SET` data structure. It takes in an input file and reads each word in the file. All unique elements are added to the set. The user is then prompted to search to see if a word is found in the set. If the word is found, its hash value is returned. The file also returns the total number of words read as well as number of distinct words.
+
+Compilation:
+
+```
+gcc -o test test.c
+```
+
+Execution:
+
+```
+./test <input file>
+```
 
 ## Analysis
 
