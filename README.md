@@ -9,7 +9,7 @@ A Makefile has been included to easily compile all C source files in this projec
 make all
 ```
 
-If any of the files fail to compile, they can also be compiled using the respective commands below.
+If any of the files fail to compile, they can also be compiled using the respective commands below. Note that the `/usr/local/lib` directory is the install location of OpenSSL on my machine and may be different on yours. If OpenSSL is not installed on your machine, you can use the included directory found in `Hasher/openssl` in this project.
 
 ## File Descriptions
 
@@ -115,4 +115,4 @@ To detect duplicate strings, I would implement the `SET` data structure defined 
 
 2. How would you save space, using the key-lookup that you have previousy implemented, if you were told that the strings were very long, and that many of them were identical to each other?
 
-To save space, each string could be added to `SET` structure. This way, each string can be respresented as a hash value in only 64 bytes. The set would only contain unique strings as well, eliminating much of the extra space allocated for duplicate strings. 
+To save space, each string could be added to `SET` structure. This way, each string can be respresented as a hash value in only 64 bytes. The set would only contain unique strings as well, eliminating much of the extra space allocated for duplicate strings.
