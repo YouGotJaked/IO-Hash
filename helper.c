@@ -37,7 +37,7 @@ void check_file(FILE *fp, char **argv) {
     }
 }
 
-// append previous cat hash to str, then append '\0' as string literal
+// append previous cat hash to str, then append '\0'
 unsigned char *concatenate(char *str, unsigned char *catHash) {
     unsigned char *append = (unsigned char*) malloc(SIZE + HASH_LEN);
     memcpy(append, str, SIZE);
