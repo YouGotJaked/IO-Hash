@@ -111,4 +111,8 @@ Execution:
 
 1. How would you use such a program to detect duplicate strings (without modifying the programs themselves, but only using operations conducted on their output)?
 
+To detect duplicate strings, I would implement the `SET` data structure defined in the prelab file `key_value.c`. Each string being read in would be added to the set, but the set would only contain unique strings. Using the `hasElement` function, the set would determine if the string is already in the set by using the string's hash value.
+
 2. How would you save space, using the key-lookup that you have previousy implemented, if you were told that the strings were very long, and that many of them were identical to each other?
+
+To save space, each string could be added to `SET` structure. This way, each string can be respresented as a hash value in only 64 bytes. The set would only contain unique strings as well, eliminating much of the extra space allocated for duplicate strings. 
